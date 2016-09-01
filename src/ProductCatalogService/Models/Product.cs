@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ProductCatalogService.Models
 {
-    class Product
+    public class Product
     {
         public string Sku { get; set; }
 
