@@ -40,6 +40,7 @@ namespace ProductCatalogService
             services.AddApplicationInsightsTelemetry(Configuration);
 
             services.AddMvc();
+            services.AddSwaggerGen();
 
             services.AddSingleton<IProductsRepository, InMemoryProductsRepository>();
         }
@@ -55,6 +56,9 @@ namespace ProductCatalogService
             app.UseApplicationInsightsExceptionTelemetry();
 
             app.UseMvc();
+            app.UseSwagger();
+            app.UseSwaggerUi();
+
         }
     }
 }

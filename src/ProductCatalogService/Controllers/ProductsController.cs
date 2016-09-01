@@ -17,6 +17,7 @@ namespace ProductCatalogService.Controllers
             _productsRepository = productRepository;
         }
 
+        [HttpGet]
         public IEnumerable<Product> GetAll()
         {
             return _productsRepository.GetAll();
