@@ -41,7 +41,7 @@ namespace ProductCatalogService
 
             services.AddMvc();
 
-            services.AddSingleton<IProductRepository, InMemoryProductRepository>();
+            services.AddSingleton<IProductsRepository, InMemoryProductsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline

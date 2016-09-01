@@ -8,11 +8,11 @@ using ProductCatalogService.Exceptions;
 
 namespace ProductCatalogService.DataLayer
 {
-    class InMemoryProductRepository : IProductRepository
+    class InMemoryProductsRepository : IProductsRepository
     {
         private ConcurrentDictionary<string, Product> _products = new ConcurrentDictionary<string, Product>();
 
-        public InMemoryProductRepository()
+        public InMemoryProductsRepository()
         {
             // TODO
             Add(new Product { Sku = "123", Name = "Watch", Description = "Gives accurate time." });

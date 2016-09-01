@@ -2,7 +2,7 @@
 
 namespace ProductCatalogService.Models
 {
-    public interface IProductRepository
+    public interface IProductsRepository
     {
         void Add(Product item);
 

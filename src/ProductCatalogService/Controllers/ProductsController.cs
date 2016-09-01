@@ -10,9 +10,9 @@ namespace ProductCatalogService.Controllers
     [Route("api/[controller]")]
     public class ProductsController : Controller
     {
-        private readonly IProductRepository _productsRepository;
+        private readonly IProductsRepository _productsRepository;
 
-        public ProductsController(IProductRepository productRepository)
+        public ProductsController(IProductsRepository productRepository)
         {
             _productsRepository = productRepository;
         }
