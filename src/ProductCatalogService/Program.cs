@@ -17,6 +17,7 @@ namespace ProductCatalogService
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
+                //.UseUrls("http://localhost:30333/") // other alternatives available here: http://stackoverflow.com/questions/37365277/how-to-specify-the-port-an-asp-net-core-application-is-hosted-on/37365382
                 .Build();
 
             host.Run();
