@@ -20,7 +20,7 @@ namespace ProductCatalog.LoadTester.Generated
     using Newtonsoft.Json;
     using Models;
 
-    public partial class APIV1 : ServiceClient<APIV1>, IAPIV1
+    public partial class CatalogServiceAPI : ServiceClient<CatalogServiceAPI>, ICatalogServiceAPI
     {
         /// <summary>
         /// The base URI of the service.
@@ -38,18 +38,18 @@ namespace ProductCatalog.LoadTester.Generated
         public JsonSerializerSettings DeserializationSettings { get; private set; }        
 
         /// <summary>
-        /// Initializes a new instance of the APIV1 class.
+        /// Initializes a new instance of the CatalogServiceAPI class.
         /// </summary>
         /// <param name='handlers'>
         /// Optional. The delegating handlers to add to the http client pipeline.
         /// </param>
-        public APIV1(params DelegatingHandler[] handlers) : base(handlers)
+        public CatalogServiceAPI(params DelegatingHandler[] handlers) : base(handlers)
         {
             this.Initialize();
         }
 
         /// <summary>
-        /// Initializes a new instance of the APIV1 class.
+        /// Initializes a new instance of the CatalogServiceAPI class.
         /// </summary>
         /// <param name='rootHandler'>
         /// Optional. The http client handler used to handle http transport.
@@ -57,13 +57,13 @@ namespace ProductCatalog.LoadTester.Generated
         /// <param name='handlers'>
         /// Optional. The delegating handlers to add to the http client pipeline.
         /// </param>
-        public APIV1(HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : base(rootHandler, handlers)
+        public CatalogServiceAPI(HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : base(rootHandler, handlers)
         {
             this.Initialize();
         }
 
         /// <summary>
-        /// Initializes a new instance of the APIV1 class.
+        /// Initializes a new instance of the CatalogServiceAPI class.
         /// </summary>
         /// <param name='baseUri'>
         /// Optional. The base URI of the service.
@@ -71,7 +71,7 @@ namespace ProductCatalog.LoadTester.Generated
         /// <param name='handlers'>
         /// Optional. The delegating handlers to add to the http client pipeline.
         /// </param>
-        public APIV1(Uri baseUri, params DelegatingHandler[] handlers) : this(handlers)
+        public CatalogServiceAPI(Uri baseUri, params DelegatingHandler[] handlers) : this(handlers)
         {
             if (baseUri == null)
             {
@@ -81,7 +81,7 @@ namespace ProductCatalog.LoadTester.Generated
         }
 
         /// <summary>
-        /// Initializes a new instance of the APIV1 class.
+        /// Initializes a new instance of the CatalogServiceAPI class.
         /// </summary>
         /// <param name='baseUri'>
         /// Optional. The base URI of the service.
@@ -92,7 +92,7 @@ namespace ProductCatalog.LoadTester.Generated
         /// <param name='handlers'>
         /// Optional. The delegating handlers to add to the http client pipeline.
         /// </param>
-        public APIV1(Uri baseUri, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
+        public CatalogServiceAPI(Uri baseUri, HttpClientHandler rootHandler, params DelegatingHandler[] handlers) : this(rootHandler, handlers)
         {
             if (baseUri == null)
             {

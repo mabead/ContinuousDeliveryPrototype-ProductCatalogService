@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using ProductCatalogService.Models;
 using ProductCatalogService.DataLayer;
+using Swashbuckle.Swagger.Model;
 
 namespace ProductCatalogService
 {
@@ -41,6 +42,15 @@ namespace ProductCatalogService
 
             services.AddMvc();
             services.AddSwaggerGen();
+            services.ConfigureSwaggerGen(options =>
+            {
+                options.SingleApiVersion(new Info
+                {
+                    Version = "v1",
+                    Title = "CatalogService API",
+                    TermsOfService = "None",
+                });
+            });
 
             services.AddSingleton<IProductsRepository, InMemoryProductsRepository>();
         }

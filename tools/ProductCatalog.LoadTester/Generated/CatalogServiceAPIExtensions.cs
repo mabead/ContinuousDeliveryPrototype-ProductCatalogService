@@ -13,16 +13,16 @@ namespace ProductCatalog.LoadTester.Generated
     using Models;
 
     /// <summary>
-    /// Extension methods for APIV1.
+    /// Extension methods for CatalogServiceAPI.
     /// </summary>
-    public static partial class APIV1Extensions
+    public static partial class CatalogServiceAPIExtensions
     {
             /// <param name='operations'>
             /// The operations group for this extension method.
             /// </param>
-            public static IList<Product> ApiProductsGet(this IAPIV1 operations)
+            public static IList<Product> ApiProductsGet(this ICatalogServiceAPI operations)
             {
-                return Task.Factory.StartNew(s => ((IAPIV1)s).ApiProductsGetAsync(), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
+                return Task.Factory.StartNew(s => ((ICatalogServiceAPI)s).ApiProductsGetAsync(), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
             /// <param name='operations'>
@@ -31,7 +31,7 @@ namespace ProductCatalog.LoadTester.Generated
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task<IList<Product>> ApiProductsGetAsync(this IAPIV1 operations, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task<IList<Product>> ApiProductsGetAsync(this ICatalogServiceAPI operations, CancellationToken cancellationToken = default(CancellationToken))
             {
                 using (var _result = await operations.ApiProductsGetWithHttpMessagesAsync(null, cancellationToken).ConfigureAwait(false))
                 {
@@ -44,9 +44,9 @@ namespace ProductCatalog.LoadTester.Generated
             /// </param>
             /// <param name='id'>
             /// </param>
-            public static void ApiProductsByIdGet(this IAPIV1 operations, string id)
+            public static void ApiProductsByIdGet(this ICatalogServiceAPI operations, string id)
             {
-                Task.Factory.StartNew(s => ((IAPIV1)s).ApiProductsByIdGetAsync(id), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
+                Task.Factory.StartNew(s => ((ICatalogServiceAPI)s).ApiProductsByIdGetAsync(id), operations, CancellationToken.None, TaskCreationOptions.None, TaskScheduler.Default).Unwrap().GetAwaiter().GetResult();
             }
 
             /// <param name='operations'>
@@ -57,7 +57,7 @@ namespace ProductCatalog.LoadTester.Generated
             /// <param name='cancellationToken'>
             /// The cancellation token.
             /// </param>
-            public static async Task ApiProductsByIdGetAsync(this IAPIV1 operations, string id, CancellationToken cancellationToken = default(CancellationToken))
+            public static async Task ApiProductsByIdGetAsync(this ICatalogServiceAPI operations, string id, CancellationToken cancellationToken = default(CancellationToken))
             {
                 await operations.ApiProductsByIdGetWithHttpMessagesAsync(id, null, cancellationToken).ConfigureAwait(false);
             }

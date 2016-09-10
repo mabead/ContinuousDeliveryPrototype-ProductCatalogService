@@ -15,7 +15,7 @@ namespace ProductCatalog.LoadTester.Generated
 
     /// <summary>
     /// </summary>
-    public partial interface IAPIV1 : IDisposable
+    public partial interface ICatalogServiceAPI : IDisposable
     {
         /// <summary>
         /// The base URI of the service.
