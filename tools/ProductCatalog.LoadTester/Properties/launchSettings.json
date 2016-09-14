@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ProductCatalog.LoadTester": {
+      "commandName": "Project",
+      "commandLineArgs": "http://localhost:26928"
+    }
+  }
+}
